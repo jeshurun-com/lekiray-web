@@ -3,7 +3,7 @@ import React from "react";
 function Download() {
   return (
     <div id="download"
-      className="py-16 px-6 bg-gray-100 text-center"
+      className="snap-start py-16 px-6 bg-gray-100 text-center"
       style={{ backgroundColor: "#F7F7F7" }}
     >
       <h2 className="text-3xl font-bold text-red-500 mb-5">Download the App</h2>

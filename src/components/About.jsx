@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <div id="about" className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div id="about" className="snap-start bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Text Section */}
         <div className="text-left">

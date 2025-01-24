@@ -22,7 +22,7 @@ function Features() {
   ];
 
   return (
-    <div id="features" className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <div id="features" className="snap-start bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-extrabold text-red-500">Key Features</h2>
       </div>
@@ -42,6 +42,6 @@ function Features() {
       </div>
     </div>
   );
-};
+}
 
 export default Features;

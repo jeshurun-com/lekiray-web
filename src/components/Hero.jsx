@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
 
 function Hero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div
-    id="hero"
-      className="h-screen bg-cover bg-center flex flex-col"
+      id="hero"
+      className="snap-start relative h-screen bg-cover bg-center flex flex-col"
       style={{
         backgroundImage:
           "url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
       }}
     >
+      {/* Black Overlay */}
+      <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+
       {/* Header */}
       <header className="flex justify-between items-center w-full p-5 bg-white/90 fixed top-0 z-50">
         {/* Logo */}
-        <div className="text-red-500 font-bold text-2xl">lekiray</div>
+        <div className="text-red-500 font-bold text-2xl capitalize">lekiray</div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-5">
@@ -26,10 +30,16 @@ function Hero() {
           <a href="#about" className="text-black font-medium hover:text-red-500">
             ABOUT
           </a>
-          <a href="#features" className="text-black font-medium hover:text-red-500">
+          <a
+            href="#features"
+            className="text-black font-medium hover:text-red-500"
+          >
             FEATURES
           </a>
-          <a href="#download" className="text-black font-medium hover:text-red-500">
+          <a
+            href="#download"
+            className="text-black font-medium hover:text-red-500"
+          >
             DOWNLOAD
           </a>
         </nav>
@@ -39,7 +49,11 @@ function Hero() {
           className="md:hidden text-2xl text-black"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <FaTimes className="cursor-pointer"/> : <FaBars className="cursor-pointer"/>}
+          {isMenuOpen ? (
+            <FaTimes className="cursor-pointer" />
+          ) : (
+            <FaBars className="cursor-pointer" />
+          )}
         </button>
       </header>
 
@@ -74,9 +88,20 @@ function Hero() {
       )}
 
       {/* Hero Content */}
-      <div className="flex flex-col items-center justify-center flex-grow text-center text-white mt-20 md:mt-0">
-        <h1 className="text-4xl font-bold mb-8">
-          FIND YOUR SPACE, ANYTIME, ANYWHERE.
+      <div className="relative z-20 flex flex-col items-center justify-center flex-grow text-center text-white mt-20 md:mt-0">
+        <h1 className="md:text-4xl text-3xl sm:text-4xl lg:text-5xl font-medium mb-8">
+          <Typewriter
+            words={[
+              "Discover Your Ideal Rental Space with Ease!",
+              "Find Your Space, Anytime, Anywhere!",
+            ]}
+            loop={false}
+            cursor
+            cursorStyle="|"
+            typeSpeed={40}
+            deleteSpeed={40}
+            delaySpeed={3500}
+          />
         </h1>
         <div className="flex space-x-5">
           <a
