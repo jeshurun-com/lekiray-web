@@ -2,11 +2,11 @@ import React from "react";
 
 function Download() {
   return (
-    <div
+    <div id="download"
       className="py-16 px-6 bg-gray-100 text-center"
       style={{ backgroundColor: "#F7F7F7" }}
     >
-      <h2 className="text-3xl font-bold text-gray-900 mb-5">Download the App</h2>
+      <h2 className="text-3xl font-bold text-red-500 mb-5">Download the App</h2>
       <p className="text-gray-600 mb-8">
         Experience the ease of finding your next rental. Get the app now!
       </p>
